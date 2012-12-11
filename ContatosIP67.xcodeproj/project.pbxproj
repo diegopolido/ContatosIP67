@@ -13,8 +13,8 @@
 		02ED01451677D956006FEA2C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02ED01431677D956006FEA2C /* InfoPlist.strings */; };
 		02ED01471677D956006FEA2C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ED01461677D956006FEA2C /* main.m */; };
 		02ED014B1677D956006FEA2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ED014A1677D956006FEA2C /* AppDelegate.m */; };
-		02ED014E1677D956006FEA2C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ED014D1677D956006FEA2C /* ViewController.m */; };
-		02ED01511677D956006FEA2C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ED014F1677D956006FEA2C /* ViewController.xib */; };
+		02ED015A1677DA9B006FEA2C /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ED01581677DA9B006FEA2C /* FormularioContatoViewController.m */; };
+		02ED015B1677DA9B006FEA2C /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ED01591677DA9B006FEA2C /* FormularioContatoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +28,9 @@
 		02ED01481677D956006FEA2C /* ContatosIP67-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContatosIP67-Prefix.pch"; sourceTree = "<group>"; };
 		02ED01491677D956006FEA2C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02ED014A1677D956006FEA2C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		02ED014C1677D956006FEA2C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		02ED014D1677D956006FEA2C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		02ED01501677D956006FEA2C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		02ED01571677DA9B006FEA2C /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
+		02ED01581677DA9B006FEA2C /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
+		02ED01591677DA9B006FEA2C /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +79,9 @@
 			children = (
 				02ED01491677D956006FEA2C /* AppDelegate.h */,
 				02ED014A1677D956006FEA2C /* AppDelegate.m */,
-				02ED014C1677D956006FEA2C /* ViewController.h */,
-				02ED014D1677D956006FEA2C /* ViewController.m */,
-				02ED014F1677D956006FEA2C /* ViewController.xib */,
+				02ED01571677DA9B006FEA2C /* FormularioContatoViewController.h */,
+				02ED01581677DA9B006FEA2C /* FormularioContatoViewController.m */,
+				02ED01591677DA9B006FEA2C /* FormularioContatoViewController.xib */,
 				02ED01411677D956006FEA2C /* Supporting Files */,
 			);
 			path = ContatosIP67;
@@ -149,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02ED01451677D956006FEA2C /* InfoPlist.strings in Resources */,
-				02ED01511677D956006FEA2C /* ViewController.xib in Resources */,
+				02ED015B1677DA9B006FEA2C /* FormularioContatoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +162,7 @@
 			files = (
 				02ED01471677D956006FEA2C /* main.m in Sources */,
 				02ED014B1677D956006FEA2C /* AppDelegate.m in Sources */,
-				02ED014E1677D956006FEA2C /* ViewController.m in Sources */,
+				02ED015A1677DA9B006FEA2C /* FormularioContatoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,14 +175,6 @@
 				02ED01441677D956006FEA2C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		02ED014F1677D956006FEA2C /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02ED01501677D956006FEA2C /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
