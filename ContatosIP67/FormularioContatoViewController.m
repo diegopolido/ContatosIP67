@@ -33,4 +33,17 @@
     [self.view endEditing:YES];
     
 }
+-(IBAction)proximoElemento:(UITextField*)textField {
+    if(textField == self.nome) {
+        [self.telefone becomeFirstResponder];
+    } else if(textField == self.telefone) {
+        [self.email becomeFirstResponder];
+    } else if(textField == self.email) {
+        [self.endereco becomeFirstResponder];
+    } else if(textField == self.endereco) {
+        [self.site becomeFirstResponder];
+    } else if(textField == self.site) {
+        [self.site resignFirstResponder];
+    } 
+}
 @end

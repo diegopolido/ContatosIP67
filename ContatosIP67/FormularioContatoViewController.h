@@ -17,4 +17,5 @@
 @property (nonatomic, weak) IBOutlet UITextField *telefone;
 
 -(IBAction)pegaDadosDoFormulario:(id)sender;
+-(IBAction)proximoElemento:(UITextField*)textField;
 @end
