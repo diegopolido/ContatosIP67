@@ -30,7 +30,7 @@
     
     NSLog(@"Dados: %@", contato.nome);
     
-    [telefone resignFirstResponder];
+    [self.view endEditing:YES];
     
 }
 @end
