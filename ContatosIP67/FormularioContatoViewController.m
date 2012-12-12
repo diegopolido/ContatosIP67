@@ -20,11 +20,12 @@
     
     Contato *contato = [[Contato alloc] init];
 
-    contato.nome =  nome.text;
-    contato.email = email.text;
-    contato.endereco = endereco.text;
-    contato.site = site.text;
-    contato.telefone = telefone.text;
+    [contato setNome: [nome text]];
+    [contato setEmail: [email text]];
+    [contato setEndereco: [endereco text]];
+    [contato setSite: [site text]];
+    [contato setTelefone: [telefone text]];
+    
     NSLog(@"Dados: %@", contato.nome);
     
 }
