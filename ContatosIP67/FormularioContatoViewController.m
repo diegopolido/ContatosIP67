@@ -14,9 +14,15 @@
 
 @implementation FormularioContatoViewController
 
-@synthesize nome, email, endereco, site, telefone;
+@synthesize nome, email, endereco, site, telefone, contatos;
 
-
+-(id)init {
+    self = [super init];
+    if (self != nil) {
+        contatos = [[NSMutableArray alloc]init];        
+    }
+    return self;
+}
 
 -(IBAction)pegaDadosDoFormulario:(id)sender {
     
@@ -28,6 +34,7 @@
     [contato setSite: [site text]];
     [contato setTelefone: [telefone text]];
     
+    [contatos addObject:contato];
     NSLog(@"Dados: %@", contato.nome);
     
     [self.view endEditing:YES];
