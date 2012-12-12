@@ -16,6 +16,8 @@
 
 @synthesize nome, email, endereco, site, telefone;
 
+
+
 -(IBAction)pegaDadosDoFormulario:(id)sender {
     
     Contato *contato = [[Contato alloc] init];
@@ -27,6 +29,8 @@
     [contato setTelefone: [telefone text]];
     
     NSLog(@"Dados: %@", contato.nome);
+    
+    [telefone resignFirstResponder];
     
 }
 @end
