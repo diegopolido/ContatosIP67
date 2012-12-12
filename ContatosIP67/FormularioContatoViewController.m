@@ -7,7 +7,7 @@
 //
 
 #import "FormularioContatoViewController.h"
-
+#import "Contato.h"
 @interface FormularioContatoViewController ()
 
 @end
@@ -17,16 +17,15 @@
 @synthesize nome, email, endereco, site, telefone;
 
 -(IBAction)pegaDadosDoFormulario:(id)sender {
-//    NSDictionary *contato = [[NSDictionary alloc] initWithObjectsAndKeys:
-//                            @"Vaor1", @"Chave1", @"Valor2", @"Chave2", nil];
-    NSMutableDictionary *contato = [[NSMutableDictionary alloc] init];
+    
+    Contato *contato = [[Contato alloc] init];
 
-    [contato setObject: [nome text] forKey:@"nome"];
-    [contato setObject: [email text] forKey:@"email"];
-    [contato setObject: [endereco text] forKey:@"endereco"];
-    [contato setObject: [site text] forKey:@"site"];
-    [contato setObject: [telefone text] forKey:@"telefone"];
-    NSLog(@"Dados: %@", contato);
+    contato.nome =  nome.text;
+    contato.email = email.text;
+    contato.endereco = endereco.text;
+    contato.site = site.text;
+    contato.telefone = telefone.text;
+    NSLog(@"Dados: %@", contato.nome);
     
 }
 @end

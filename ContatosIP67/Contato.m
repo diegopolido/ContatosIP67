@@ -10,4 +10,6 @@
 
 @implementation Contato
 
+@synthesize nome, telefone, email, endereco, site;
+
 @end
