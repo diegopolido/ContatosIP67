@@ -35,7 +35,8 @@
     [contato setTelefone: [telefone text]];
     
     [contatos addObject:contato];
-    NSLog(@"Dados: %@", contato.nome);
+        
+     NSLog(@"Dados: %@", contato.nome);
     
     [self.view endEditing:YES];
     

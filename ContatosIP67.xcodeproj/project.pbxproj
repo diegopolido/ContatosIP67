@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02E4C19C1677F970001A6A89 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4C19B1677F970001A6A89 /* Contato.m */; };
+		02E4C1A1167A77C2001A6A89 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4C1A0167A77C2001A6A89 /* ListaContatosViewController.m */; };
 		02ED013B1677D956006FEA2C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ED013A1677D956006FEA2C /* UIKit.framework */; };
 		02ED013D1677D956006FEA2C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ED013C1677D956006FEA2C /* Foundation.framework */; };
 		02ED013F1677D956006FEA2C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02ED013E1677D956006FEA2C /* CoreGraphics.framework */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		02E4C19A1677F970001A6A89 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		02E4C19B1677F970001A6A89 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		02E4C19F167A77C2001A6A89 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
+		02E4C1A0167A77C2001A6A89 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 		02ED01361677D956006FEA2C /* ContatosIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatosIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02ED013A1677D956006FEA2C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		02ED013C1677D956006FEA2C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +67,8 @@
 			children = (
 				02ED01571677DA9B006FEA2C /* FormularioContatoViewController.h */,
 				02ED01581677DA9B006FEA2C /* FormularioContatoViewController.m */,
+				02E4C19F167A77C2001A6A89 /* ListaContatosViewController.h */,
+				02E4C1A0167A77C2001A6A89 /* ListaContatosViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 				02ED014B1677D956006FEA2C /* AppDelegate.m in Sources */,
 				02ED015A1677DA9B006FEA2C /* FormularioContatoViewController.m in Sources */,
 				02E4C19C1677F970001A6A89 /* Contato.m in Sources */,
+				02E4C1A1167A77C2001A6A89 /* ListaContatosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
