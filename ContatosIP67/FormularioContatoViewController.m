@@ -19,7 +19,10 @@
 -(id)init {
     self = [super init];
     if (self != nil) {
-        contatos = [[NSMutableArray alloc]init];        
+        contatos = [[NSMutableArray alloc]init];
+        self.navigationItem.title = @"Contato";
+        UIBarButtonItem *voltar = [[UIBarButtonItem alloc]initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(voltar)];
+        self.navigationItem.leftBarButtonItem = voltar;
     }
     return self;
 }
@@ -53,5 +56,9 @@
     } else if(textField == self.site) {
         [self.site resignFirstResponder];
     } 
+}
+
+-(IBAction)voltar {
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end

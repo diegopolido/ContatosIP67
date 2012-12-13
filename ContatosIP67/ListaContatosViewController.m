@@ -24,7 +24,8 @@
 
 -(void) exibeFormulario {
     FormularioContatoViewController *form = [[FormularioContatoViewController alloc]init];
-    [self presentModalViewController:form animated:YES];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:form];
+    [self presentModalViewController:nav animated:YES];
     NSLog(@"Aqui vamos exibir o formulário!");
 }
 @end
