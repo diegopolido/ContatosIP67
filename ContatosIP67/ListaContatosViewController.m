@@ -7,6 +7,7 @@
 //
 
 #import "ListaContatosViewController.h"
+#import "FormularioContatoViewController.h"
 
 @implementation ListaContatosViewController
 
@@ -22,6 +23,8 @@
 }
 
 -(void) exibeFormulario {
+    FormularioContatoViewController *form = [[FormularioContatoViewController alloc]init];
+    [self presentModalViewController:form animated:YES];
     NSLog(@"Aqui vamos exibir o formulário!");
 }
 @end
