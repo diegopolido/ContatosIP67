@@ -8,12 +8,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ContatosIP67/FormularioContatoViewController.m"
-         timestampString = "377131674.859154"
+         timestampString = "377134071.43925"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "34"
-         endingLineNumber = "34"
-         landmarkName = "-pegaDadosDoFormulario:"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
+         landmarkName = "-pegaDadosDoFormulario"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

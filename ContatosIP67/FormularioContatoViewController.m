@@ -21,13 +21,16 @@
     if (self != nil) {
         contatos = [[NSMutableArray alloc]init];
         self.navigationItem.title = @"Contato";
-        UIBarButtonItem *voltar = [[UIBarButtonItem alloc]initWithTitle:@"Voltar" style:UIBarButtonItemStylePlain target:self action:@selector(voltar)];
-        self.navigationItem.leftBarButtonItem = voltar;
+        UIBarButtonItem *cancelar = [[UIBarButtonItem alloc]initWithTitle:@"Cancelar" style:UIBarButtonItemStylePlain target:self action:@selector(voltar)];
+        self.navigationItem.leftBarButtonItem = cancelar;
+        UIBarButtonItem *adicionar = [[UIBarButtonItem alloc]initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(adicionar)];
+        self.navigationItem.rightBarButtonItem = adicionar;
+        
     }
     return self;
 }
 
--(IBAction)pegaDadosDoFormulario:(id)sender {
+-(Contato*)pegaDadosDoFormulario {
     
     Contato *contato = [[Contato alloc] init];
 
@@ -37,13 +40,10 @@
     [contato setSite: [site text]];
     [contato setTelefone: [telefone text]];
     
-    [contatos addObject:contato];
-        
-     NSLog(@"Dados: %@", contato.nome);
-    
-    [self.view endEditing:YES];
+    return contato;
     
 }
+
 -(IBAction)proximoElemento:(UITextField*)textField {
     if(textField == self.nome) {
         [self.telefone becomeFirstResponder];
@@ -58,7 +58,16 @@
     } 
 }
 
--(IBAction)voltar {
+-(void)voltar {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+-(void)adicionar {
+    Contato *contato = [self pegaDadosDoFormulario];
+    [contatos addObject:contato];
+     
+    NSLog(@"Dados: %@", contatos);
+     
     [self dismissModalViewControllerAnimated:YES];
 }
 @end

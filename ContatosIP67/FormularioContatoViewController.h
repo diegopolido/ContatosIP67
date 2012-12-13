@@ -17,6 +17,5 @@
 @property (nonatomic, weak) IBOutlet UITextField *telefone;
 @property (nonatomic, strong) NSMutableArray *contatos;
 
--(IBAction)pegaDadosDoFormulario:(id)sender;
 -(IBAction)proximoElemento:(UITextField*)textField;
 @end
