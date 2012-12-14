@@ -11,6 +11,8 @@
 
 @implementation ListaContatosViewController
 
+@synthesize contatos;
+
 -(id)init {
     self = [super init];
     if(self) {
@@ -24,8 +26,13 @@
 
 -(void) exibeFormulario {
     FormularioContatoViewController *form = [[FormularioContatoViewController alloc]init];
+    form.contatos = self.contatos;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:form];
     [self presentModalViewController:nav animated:YES];
     NSLog(@"Aqui vamos exibir o formulário!");
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    NSLog(@"Total cadastrado: %d", [self.contatos count]);
 }
 @end

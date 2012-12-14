@@ -19,7 +19,6 @@
 -(id)init {
     self = [super init];
     if (self != nil) {
-        contatos = [[NSMutableArray alloc]init];
         self.navigationItem.title = @"Contato";
         UIBarButtonItem *cancelar = [[UIBarButtonItem alloc]initWithTitle:@"Cancelar" style:UIBarButtonItemStylePlain target:self action:@selector(voltar)];
         self.navigationItem.leftBarButtonItem = cancelar;

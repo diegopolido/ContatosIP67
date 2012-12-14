@@ -14,12 +14,15 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+@synthesize contatos;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     ListaContatosViewController *lista = [[ListaContatosViewController alloc] init];
+    self.contatos = [[NSMutableArray alloc]init];
+    lista.contatos = self.contatos;
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController: lista];
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
