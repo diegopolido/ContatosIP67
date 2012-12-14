@@ -8,6 +8,7 @@
 
 #import "ListaContatosViewController.h"
 #import "FormularioContatoViewController.h"
+#import "Contato.h"
 
 @implementation ListaContatosViewController
 
@@ -33,6 +34,22 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated {
+    [self.tableView reloadData];
     NSLog(@"Total cadastrado: %d", [self.contatos count]);
+}
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.contatos count];
+}
+
+-(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    Contato *contato = [self.contatos objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    cell.textLabel.text = contato.nome;
+    cell.detailTextLabel.text = @"»";
+    return cell;
 }
 @end
