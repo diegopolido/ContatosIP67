@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface ListaContatosViewController : UITableViewController
+#import "ListaContatoProtocol.h"
+@interface ListaContatosViewController : UITableViewController<ListaContatoProtocol>
 
 @property (strong) NSMutableArray *contatos;
 

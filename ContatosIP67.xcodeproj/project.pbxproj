@@ -20,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02D198B516811D9A00E40C12 /* ListaContatoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatoProtocol.h; sourceTree = "<group>"; };
 		02E4C19A1677F970001A6A89 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		02E4C19B1677F970001A6A89 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		02E4C19F167A77C2001A6A89 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
@@ -53,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02D198B316811D8600E40C12 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				02D198B516811D9A00E40C12 /* ListaContatoProtocol.h */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
 		02E4C1981677F943001A6A89 /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +120,7 @@
 		02ED01401677D956006FEA2C /* ContatosIP67 */ = {
 			isa = PBXGroup;
 			children = (
+				02D198B316811D8600E40C12 /* util */,
 				02E4C19E1677F98E001A6A89 /* view */,
 				02E4C19D1677F97F001A6A89 /* controller */,
 				02E4C1981677F943001A6A89 /* model */,

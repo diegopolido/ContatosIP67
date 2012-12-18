@@ -15,7 +15,7 @@
 @implementation FormularioContatoViewController
 
 @synthesize nome, email, endereco, site, telefone;
-@synthesize contatos, contato;
+@synthesize contatos, contato, delegate;
 
 -(id)init {
     self = [super init];
@@ -65,7 +65,8 @@
 }
 
 -(void) atualizaContato {
-    [self pegaDadosDoFormulario];
+    Contato *contatoatualizado = [self pegaDadosDoFormulario];
+    [self.delegate contatoAtualizado:contatoatualizado];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -92,7 +93,7 @@
     [contatos addObject:cont];
      
     NSLog(@"Dados: %@", contatos);
-     
+    [self.delegate contatoAdicionado:cont];
     [self dismissModalViewControllerAnimated:YES];
 }
 @end

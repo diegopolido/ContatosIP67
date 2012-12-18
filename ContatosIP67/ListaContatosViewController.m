@@ -29,11 +29,19 @@
 -(void) exibeFormulario {
     FormularioContatoViewController *form = [[FormularioContatoViewController alloc]init];
     form.contatos = self.contatos;
+    form.delegate = self;
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:form];
     [self presentModalViewController:nav animated:YES];
     NSLog(@"Aqui vamos exibir o formulário!");
 }
 
+-(void)contatoAdicionado:(Contato*) _contato {
+    NSLog(@"contatoAdicionado: %@", _contato.nome);
+}
+
+-(void) contatoAtualizado:(Contato *)_contato {
+    NSLog(@"contatoAtualizado: %@", _contato.nome);    
+}
 -(void) viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
     NSLog(@"Total cadastrado: %d", [self.contatos count]);
@@ -63,6 +71,7 @@
     Contato *contato = [self.contatos objectAtIndex:indexPath.row];
     FormularioContatoViewController *form = [[FormularioContatoViewController alloc] initWithContato:contato];
     form.contatos = self.contatos;
+    form.delegate = self;
     [self.navigationController pushViewController:form animated:YES];
 }
 @end
