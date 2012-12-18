@@ -11,5 +11,7 @@
 @interface ListaContatosViewController : UITableViewController<ListaContatoProtocol>
 
 @property (strong) NSMutableArray *contatos;
+@property (strong) NSIndexPath *indexPath;
+@property NSInteger linhaEmDestaque;
 
 @end
