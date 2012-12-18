@@ -59,4 +59,10 @@
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Contato *contato = [self.contatos objectAtIndex:indexPath.row];
+    FormularioContatoViewController *form = [[FormularioContatoViewController alloc] initWithContato:contato];
+    form.contatos = self.contatos;
+    [self.navigationController pushViewController:form animated:YES];
+}
 @end

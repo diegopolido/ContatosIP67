@@ -14,7 +14,8 @@
 
 @implementation FormularioContatoViewController
 
-@synthesize nome, email, endereco, site, telefone, contatos;
+@synthesize nome, email, endereco, site, telefone;
+@synthesize contatos, contato;
 
 -(id)init {
     self = [super init];
@@ -29,17 +30,33 @@
     return self;
 }
 
+-(id) initWithContato:(Contato*)contatos {
+    self = [super init];
+    if(self) {
+        self.contato = contato;
+    }
+    return self;
+}
+
+-(void)viewDidLoad {
+    nome.text = contato.nome;
+    email.text = contato.email;
+    endereco.text = contato.endereco;
+    site.text = contato.site;
+    telefone.text = contato.telefone;
+}
+
 -(Contato*)pegaDadosDoFormulario {
     
-    Contato *contato = [[Contato alloc] init];
+    Contato *cont = [[Contato alloc] init];
 
-    [contato setNome: [nome text]];
-    [contato setEmail: [email text]];
-    [contato setEndereco: [endereco text]];
-    [contato setSite: [site text]];
-    [contato setTelefone: [telefone text]];
+    [cont setNome: [nome text]];
+    [cont setEmail: [email text]];
+    [cont setEndereco: [endereco text]];
+    [cont setSite: [site text]];
+    [cont setTelefone: [telefone text]];
     
-    return contato;
+    return cont;
     
 }
 
@@ -62,8 +79,8 @@
 }
 
 -(void)adicionar {
-    Contato *contato = [self pegaDadosDoFormulario];
-    [contatos addObject:contato];
+    Contato *cont = [self pegaDadosDoFormulario];
+    [contatos addObject:cont];
      
     NSLog(@"Dados: %@", contatos);
      
