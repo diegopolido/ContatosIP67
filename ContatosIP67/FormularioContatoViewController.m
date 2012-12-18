@@ -30,10 +30,12 @@
     return self;
 }
 
--(id) initWithContato:(Contato*)contatos {
+-(id) initWithContato:(Contato*)_contato {
     self = [super init];
     if(self) {
-        self.contato = contato;
+        self.contato = _contato;
+        UIBarButtonItem *confirmar = [[UIBarButtonItem alloc]initWithTitle:@"Confirmar" style:UIBarButtonItemStylePlain target:self action:@selector(atualizaContato)];
+        self.navigationItem.rightBarButtonItem = confirmar;
     }
     return self;
 }
@@ -48,16 +50,23 @@
 
 -(Contato*)pegaDadosDoFormulario {
     
-    Contato *cont = [[Contato alloc] init];
+    if(!self.contato) {
+        contato = [[Contato alloc] init];
+    }
 
-    [cont setNome: [nome text]];
-    [cont setEmail: [email text]];
-    [cont setEndereco: [endereco text]];
-    [cont setSite: [site text]];
-    [cont setTelefone: [telefone text]];
+    [contato setNome: [nome text]];
+    [contato setEmail: [email text]];
+    [contato setEndereco: [endereco text]];
+    [contato setSite: [site text]];
+    [contato setTelefone: [telefone text]];
     
-    return cont;
+    return contato;
     
+}
+
+-(void) atualizaContato {
+    [self pegaDadosDoFormulario];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(IBAction)proximoElemento:(UITextField*)textField {

@@ -21,4 +21,5 @@
 
 -(IBAction)proximoElemento:(UITextField*)textField;
 -(id) initWithContato:(Contato*)contato;
+-(void) atualizaContato;
 @end
