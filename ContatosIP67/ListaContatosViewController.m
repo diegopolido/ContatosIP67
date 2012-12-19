@@ -46,6 +46,30 @@
     self.indexPath = [NSIndexPath indexPathForRow:linhaEmDestaque inSection:0];
     NSLog(@"contatoAtualizado: %@", _contato.nome);    
 }
+
+
+-(void) viewDidLoad{
+    [super viewDidLoad];
+    
+    UILongPressGestureRecognizer* longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(exibeMaisOpcoes:)];
+    
+    [self.tableView addGestureRecognizer:longPress];
+}
+
+-(void) exibeMaisOpcoes:(UIGestureRecognizer *) gesture {
+    if(gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint ponto = [gesture locationInView:self.tableView];
+        NSIndexPath *index = [self.tableView indexPathForRowAtPoint:ponto];
+        contatoSelecionado = [self.contatos objectAtIndex:index.row];
+        UIActionSheet *opcoes = [[UIActionSheet alloc]initWithTitle:contatoSelecionado.nome 
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Cancelar" 
+                                             destructiveButtonTitle:nil 
+                                                  otherButtonTitles:@"Ligar", @"Enviar E-mail", @"Visualizar site", nil];
+        [opcoes showInView:self.view];
+    }
+}
+
 -(void) viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
     NSLog(@"Total cadastrado com scroll: %d, com indexPath: %@", [self.contatos count], indexPath);
