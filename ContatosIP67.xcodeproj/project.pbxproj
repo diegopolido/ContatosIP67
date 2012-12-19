@@ -17,6 +17,7 @@
 		02ED014B1677D956006FEA2C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ED014A1677D956006FEA2C /* AppDelegate.m */; };
 		02ED015A1677DA9B006FEA2C /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02ED01581677DA9B006FEA2C /* FormularioContatoViewController.m */; };
 		02ED015B1677DA9B006FEA2C /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02ED01591677DA9B006FEA2C /* FormularioContatoViewController.xib */; };
+		02FC52111682812F007A3EC9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FC52101682812F007A3EC9 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		02ED01571677DA9B006FEA2C /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
 		02ED01581677DA9B006FEA2C /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
 		02ED01591677DA9B006FEA2C /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
+		02FC52101682812F007A3EC9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FC52111682812F007A3EC9 /* MessageUI.framework in Frameworks */,
 				02ED013B1677D956006FEA2C /* UIKit.framework in Frameworks */,
 				02ED013D1677D956006FEA2C /* Foundation.framework in Frameworks */,
 				02ED013F1677D956006FEA2C /* CoreGraphics.framework in Frameworks */,
@@ -93,6 +96,7 @@
 		02ED012B1677D956006FEA2C = {
 			isa = PBXGroup;
 			children = (
+				02FC52101682812F007A3EC9 /* MessageUI.framework */,
 				02ED01401677D956006FEA2C /* ContatosIP67 */,
 				02ED01391677D956006FEA2C /* Frameworks */,
 				02ED01371677D956006FEA2C /* Products */,

@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MessageUI/MFMailComposeViewController.h>
 #import "ListaContatoProtocol.h"
-@interface ListaContatosViewController : UITableViewController<ListaContatoProtocol, UIActionSheetDelegate> {
+
+@interface ListaContatosViewController : UITableViewController<ListaContatoProtocol, UIActionSheetDelegate, MFMailComposeViewControllerDelegate> {
     Contato *contatoSelecionado;
 }
 
@@ -17,5 +19,9 @@
 @property NSInteger linhaEmDestaque;
 
 -(void) exibeMaisOpcoes:(UIGestureRecognizer *) gesture;
-
+-(void) ligar;
+-(void) enviarEmail;
+-(void) abrirSite;
+-(void) mostrarMapa;
+-(void)abrirAplicativoComUrl:(NSString*)url;
 @end
