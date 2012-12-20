@@ -9,17 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "Contato.h"
 #import "ListaContatoProtocol.h"
-@interface FormularioContatoViewController : UIViewController
+@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *nome;
 @property (nonatomic, weak) IBOutlet UITextField *email;
 @property (nonatomic, weak) IBOutlet UITextField *endereco;
 @property (nonatomic, weak) IBOutlet UITextField *site;
 @property (nonatomic, weak) IBOutlet UITextField *telefone;
+@property (nonatomic, weak) IBOutlet UIButton *botaoImagem;
 @property (nonatomic, strong) NSMutableArray *contatos;
 @property (strong) Contato *contato;
 @property(strong) id<ListaContatoProtocol> delegate;
 -(IBAction)proximoElemento:(UITextField*)textField;
+-(IBAction)carregaImagem;
 -(id) initWithContato:(Contato*)contato;
 -(void) atualizaContato;
 @end

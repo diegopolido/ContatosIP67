@@ -15,7 +15,7 @@
 @implementation FormularioContatoViewController
 
 @synthesize nome, email, endereco, site, telefone;
-@synthesize contatos, contato, delegate;
+@synthesize contatos, contato, delegate, botaoImagem;
 
 -(id)init {
     self = [super init];
@@ -96,4 +96,25 @@
     [self.delegate contatoAdicionado:cont];
     [self dismissModalViewControllerAnimated:YES];
 }
+
+-(IBAction)carregaImagem {
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        NSLog(@"Tem camera");
+    } else {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.allowsEditing = YES;
+        picker.delegate = self;
+        [self presentModalViewController:picker animated:YES];
+        NSLog(@"Nao tem camera");        
+    }
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *imagemSelecionada = [info valueForKey:UIImagePickerControllerEditedImage];
+    [botaoImagem setImage:imagemSelecionada forState:UIControlStateNormal];
+    NSLog(@"Carregando imagem...");
+    [picker dismissModalViewControllerAnimated:YES];
+}
+
 @end
