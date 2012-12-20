@@ -46,6 +46,9 @@
     endereco.text = contato.endereco;
     site.text = contato.site;
     telefone.text = contato.telefone;
+    if(contato.foto) {
+        [botaoImagem setImage:contato.foto forState:UIControlStateNormal];
+    }
 }
 
 -(Contato*)pegaDadosDoFormulario {
@@ -60,6 +63,9 @@
     [contato setSite: [site text]];
     [contato setTelefone: [telefone text]];
     
+    if(botaoImagem.imageView.image) {
+        contato.foto = botaoImagem.imageView.image;
+    }
     return contato;
     
 }

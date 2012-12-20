@@ -10,7 +10,7 @@
 
 @implementation Contato
 
-@synthesize nome, telefone, email, endereco, site;
+@synthesize nome, telefone, email, endereco, site, foto;
 
 -(void) encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:nome forKey:@"nome"];
@@ -18,6 +18,7 @@
     [aCoder encodeObject:email forKey:@"email"];
     [aCoder encodeObject:endereco forKey:@"endereco"];
     [aCoder encodeObject:site forKey:@"site"];
+    [aCoder encodeObject:foto forKey:@"foto"];
 }
 
 -(id) initWithCoder:(NSCoder *)aDecoder {
@@ -28,6 +29,7 @@
         [self setEmail:[aDecoder decodeObjectForKey:@"email"]];
         [self setEndereco:[aDecoder decodeObjectForKey:@"endereco"]];
         [self setSite:[aDecoder decodeObjectForKey:@"site"]];
+        [self setFoto:[aDecoder decodeObjectForKey:@"foto"]];
     }
     return self;
 }
