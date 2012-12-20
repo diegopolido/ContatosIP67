@@ -10,6 +10,7 @@
 
 #import "ListaContatosViewController.h"
 #import "Contato.h"
+#import "ContatosNoMapaViewController.h"
 
 @implementation AppDelegate
 
@@ -33,7 +34,11 @@
 
     lista.contatos = self.contatos;
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController: lista];
-    self.window.rootViewController = nav;
+    
+    ContatosNoMapaViewController *contatosMapa = [[ContatosNoMapaViewController alloc] init];
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:nav, contatosMapa, nil];
+    self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
