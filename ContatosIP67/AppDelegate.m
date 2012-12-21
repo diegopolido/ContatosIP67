@@ -33,11 +33,13 @@
     }
 
     lista.contatos = self.contatos;
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController: lista];
+    UINavigationController *listaNavigation = [[UINavigationController alloc]initWithRootViewController: lista];
+
     
     ContatosNoMapaViewController *contatosMapa = [[ContatosNoMapaViewController alloc] init];
+    UINavigationController *mapaNavigation = [[UINavigationController alloc]initWithRootViewController: contatosMapa];
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = [NSArray arrayWithObjects:nav, contatosMapa, nil];
+    tabBarController.viewControllers = [NSArray arrayWithObjects:listaNavigation, mapaNavigation, nil];
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

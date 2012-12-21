@@ -44,6 +44,7 @@
 		02711FAD1683D097001283C0 /* mapa-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos.png"; sourceTree = "<group>"; };
 		02711FAE1683D097001283C0 /* lista-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos@2x.png"; sourceTree = "<group>"; };
 		02711FAF1683D097001283C0 /* lista-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos.png"; sourceTree = "<group>"; };
+		02711FB81683DC82001283C0 /* Rio de Janeiro.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Rio de Janeiro.gpx"; sourceTree = "<group>"; };
 		02D198B516811D9A00E40C12 /* ListaContatoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatoProtocol.h; sourceTree = "<group>"; };
 		02E4C19A1677F970001A6A89 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		02E4C19B1677F970001A6A89 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
@@ -140,6 +141,7 @@
 		02ED012B1677D956006FEA2C = {
 			isa = PBXGroup;
 			children = (
+				02711FB81683DC82001283C0 /* Rio de Janeiro.gpx */,
 				02ED01401677D956006FEA2C /* ContatosIP67 */,
 				02ED01391677D956006FEA2C /* Frameworks */,
 				02ED01371677D956006FEA2C /* Products */,

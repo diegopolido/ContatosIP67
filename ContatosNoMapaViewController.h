@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <MapKit/MKMapView.h>
 @interface ContatosNoMapaViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet MKMapView *mapa;
 @end
